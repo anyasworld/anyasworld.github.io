@@ -1,4 +1,4 @@
-function goToMap() {
+function goToMap() {    
     // Open the map.html page
     window.location.href = "map.html";
   }
