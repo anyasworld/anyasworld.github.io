@@ -2,8 +2,7 @@
 var map = L.map('map').setView([54.5260, 15.2551], 4);
 
 const mtLayer = L.maptiler.maptilerLayer({
-    apiKey: "TOKEN",
-    style: "https://api.maptiler.com/maps/01967d6a-3358-7302-b80a-40945d1cb65b/style.json"
+    style: "https://raw.githubusercontent.com/vantral/files/refs/heads/main/map.json"
   }).addTo(map);
 
 
