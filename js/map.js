@@ -1,10 +1,30 @@
-// Initialize the map
+// Initialize the map using MapTiler SDK
 var map = L.map('map').setView([54.5260, 15.2551], 4);
 
-// Add OpenStreetMap tiles
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
-}).addTo(map);
+const mtLayer = L.maptiler.maptilerLayer({
+    apiKey: "TOKEN",
+    style: "https://api.maptiler.com/maps/01967d6a-3358-7302-b80a-40945d1cb65b/style.json"
+  }).addTo(map);
+
+
+var bookIcon = L.icon({
+    iconUrl: 'book.png',
+
+    iconSize: [40, 40],
+    iconAnchor: [20, 40]
+});
+
+var krasnogorskIcon = L.icon({
+    iconUrl: 'book.png',
+    iconSize: [40, 40],
+    iconAnchor: [40, 60]
+});
+
+var moscowIcon = L.icon({
+    iconUrl: 'book.png',
+    iconSize: [40, 40],
+    iconAnchor: [20, 0]
+});
 
 
 // Define cities
@@ -55,6 +75,15 @@ var cities = [
 
 // Add markers with custom popups
 cities.forEach(function(city) {
+    if (city.name == "<i>Зависимость и ее человек</i>, Марат Агинян") {
+        var marker = L.marker(city.coords, {icon: krasnogorskIcon}).addTo(map);
+    } else if (city.name == "<i>Нет никакой Москвы</i>, Алла Горбунова") {
+        var marker = L.marker(city.coords, {icon: moscowIcon}).addTo(map);
+    }
+    else {
+        var marker = L.marker(city.coords, {icon: bookIcon}).addTo(map);
+    }   
+     
     var popupContent = `
     <div class="popup-content">
         <img src="${city.img}" alt="${city.name}">
@@ -64,7 +93,8 @@ cities.forEach(function(city) {
         </div>
     </div>
     `;
-    L.marker(city.coords)
-    .addTo(map)
-    .bindPopup(popupContent);
+    
+    marker.bindPopup(popupContent);
+
+    
 });
