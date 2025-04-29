@@ -4,61 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Europe Map</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-  crossorigin=""/>
-   <!-- Make sure you put this AFTER Leaflet's CSS -->
- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
- integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
- crossorigin=""></script>
- <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
-    #map {
-      width: 100%;
-      height: 100%;
-    }
-    .popup-content {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 14px;
-      max-width: 300px;
-    }
-    .popup-content img {
-      width: 80px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 5px;
-    }
-    .popup-text {
-      flex: 1;
-    }
-    .popup-text h2 {
-      margin: 0 0 5px 0;
-      font-size: 16px;
-    }
-    .popup-text p {
-      margin: 0;
-      font-size: 13px;
-    }
-  </style>
+
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.maptiler.com/maptiler-sdk-js/v3.0.1/maptiler-sdk.umd.min.js"></script>
+  <link href="https://cdn.maptiler.com/maptiler-sdk-js/v3.0.1/maptiler-sdk.css" rel="stylesheet" />
+  <script src="https://cdn.maptiler.com/leaflet-maptilersdk/v4.0.2/leaflet-maptilersdk.umd.min.js"></script>
+
+
+
+ <link rel="stylesheet" href="css/map_styles.css">
 </head>
 <body>
 
 <div id="map"></div>
-<script>
-  // Initialize the map
-  var map = L.map('map').setView([54.5260, 15.2551], 4);
 
-  // Add OpenStreetMap tiles
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
-  }).addTo(map);
-
-
+<script src="js/map.js"></script>
   // Define cities
   var cities = [
     { 
@@ -105,22 +67,6 @@
     }
   ];
 
-  // Add markers with custom popups
-  cities.forEach(function(city) {
-    var popupContent = `
-      <div class="popup-content">
-        <img src="${city.img}" alt="${city.name}">
-        <div class="popup-text">
-          <h2>${city.name}</h2>
-          <p>${city.description}</p>
-        </div>
-      </div>
-    `;
-    L.marker(city.coords)
-      .addTo(map)
-      .bindPopup(popupContent);
-  });
-</script>
 
 </body>
 </html>
