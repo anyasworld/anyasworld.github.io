@@ -10,19 +10,19 @@ var bookIcon = L.icon({
     iconUrl: 'book.png',
 
     iconSize: [40, 40],
-    iconAnchor: [20, 40]
+    iconAnchor: [20, 47]
 });
 
 var krasnogorskIcon = L.icon({
     iconUrl: 'book.png',
     iconSize: [40, 40],
-    iconAnchor: [40, 60]
+    iconAnchor: [40, 63]
 });
 
 var moscowIcon = L.icon({
     iconUrl: 'book.png',
     iconSize: [40, 40],
-    iconAnchor: [20, 0]
+    iconAnchor: [20, -5]
 });
 
 
