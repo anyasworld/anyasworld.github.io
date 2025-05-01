@@ -10,19 +10,22 @@ var bookIcon = L.icon({
     iconUrl: 'book.png',
 
     iconSize: [40, 40],
-    iconAnchor: [20, 47]
+    iconAnchor: [20, 47],
+    popupAnchor: [0, -47]
 });
 
 var krasnogorskIcon = L.icon({
     iconUrl: 'book.png',
     iconSize: [40, 40],
-    iconAnchor: [40, 63]
+    iconAnchor: [40, 63],
+    popupAnchor: [-20, -63]
 });
 
 var moscowIcon = L.icon({
     iconUrl: 'book.png',
     iconSize: [40, 40],
-    iconAnchor: [20, -5]
+    iconAnchor: [20, -5],
+    popupAnchor: [0, 5]
 });
 
 
@@ -32,14 +35,14 @@ var cities = [
     { 
       name: "<i>Watermark</i>, Joseph Brodsky", 
       coords: [45.4408, 12.3155],
-      description: "Famous for its canals and stunning architecture.",
-      img: "https://upload.wikimedia.org/wikipedia/commons/e/ee/Venice_Canal.jpg"
+      description: "'Если существует перевоплощение, я хотел бы свою следующую жизнь прожить в Венеции – быть там кошкой, чем угодно, даже крысой, но обязательно в Венеции'. К моменту написания этого эссе Бродский побывал в Венеции уже 17 раз. Текст был заказан у него организацией, ежегодно выпускавшей произведения искусства, воспевающие Венецию. Это эссе — не путеводитель и не рассказ о достопримечательностях, а размышление, воспоминание, попытка в словах описать ускользающую суть города, окружённого водой.",
+      img: "https://github.com/vantral/files/raw/refs/heads/main/IMG_4849.PNG"
     },
     { 
       name: "<i>Goodbye to Berlin</i>, Christopher Isherwood", 
       coords: [52.5200, 13.4050],
-      description: "Germany's capital, rich in history and culture.",
-      img: "https://upload.wikimedia.org/wikipedia/commons/4/4d/Berlin_Brandenburg_Gate.jpg"
+      description: "С начала 1930-х годов британский писатель Кристофер Ишервуд жил в Берлине. Он уезжал за свободами (в том числе сексуальными) Веймарской республики, но стал свидетелем прихода к власти Гитлера и начала периода национал-социализма. В своих дневниках он запечатлел откровенный портрет Берлина и немецкого общества начала 30-х. Своего рода мигрантская проза, которая, к сожалению, снова актуальна, и литературная основа легендарного мюзикла «Кабаре».",
+      img: "https://upload.wikimedia.org/wikipedia/en/3/30/Isherwdgoigfj.jpg"
     },
     { 
       name: "<i>Wall and Piece</i>, Banksy", 
@@ -56,8 +59,8 @@ var cities = [
     { 
       name: "<i>Нет никакой Москвы</i>, Алла Горбунова", 
       coords: [55.7558, 37.6173],
-      description: "Russia's bustling capital, famous for the Kremlin and Red Square.",
-      img: "https://upload.wikimedia.org/wikipedia/commons/0/02/Moscow_Red_Square.jpg"
+      description: "Эта книга не совсем про Москву, как подсказывает её название. Но всё-таки где-то глубоко внутри этой книги Москва спрятана. Её можно не заметить, но это не очень-то и нужно. Эта книга про что-то другое, про очень разное. Мой любимый рассказ из этой книги &mdash; Тупик. Он про университет. Ещё очень советую уснуть в середине чтения последнего рассказа.",
+      img: "https://individuum.ru/upload/iblock/e35/s59w1rhagduxep9f1q1a3ycytqvviuq7.png"
     },
     { 
       name: "<i>Зависимость и ее человек</i>, Марат Агинян", 
@@ -68,8 +71,8 @@ var cities = [
     { 
       name: "<i>The Heart of Midlothian</i>, Sir Walter Scott", 
       coords: [55.9533, -3.1883],
-      description: "Scotland's historic and cultural capital.",
-      img: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Edinburgh_Castle_from_the_Gardens.jpg"
+      description: "Один из величайших романов наверное самого известного шотландского писателя Вальтера Скотта о силе любви и справедливости. Действие романа разворачивается в Эдинбурге XVIII века, раскрывая драму справедливости, преданности и силы человеческого духа. Женская отвага против жестоких законов и людских предрассудков. Что может быть интереснее?? P.S. Вообще the Heart of Midlothian это реальное место в Эдинбурге — буквально сердце выложенное в центре города. Парадоксально, или ирочнично, но на сердце принято плевать — считается, что это принесет плевавшему удачу. Поэтому приезжай в Эдинбург за удачей!!!!",
+      img: "https://m.media-amazon.com/images/I/71R27BsnOyL._AC_UF894,1000_QL80_.jpg"
     }
   ];
 

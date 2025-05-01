@@ -1,0 +1,89 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Москва",
+        "icon": "city",
+        "importance": 10
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [37.6173, 55.7558]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Венеция",
+        "icon": "city",
+        "importance": 10
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.3155, 45.4408]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Эдинбург",
+        "icon": "city",
+        "importance": 10
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.1883, 55.9533]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gothenburg",
+        "icon": "city",
+        "importance": 10
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.9746, 57.7089]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bristol",
+        "icon": "city",
+        "importance": 10
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.5879, 51.4545]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Berlin",
+        "icon": "city",
+        "importance": 10
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.4050, 52.5200]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Krasnogorsk",
+        "icon": "city",
+        "importance": 10
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [37.3302, 55.8205]
+      }
+    }
+  ]
+}
