@@ -29,6 +29,13 @@ var moscowIcon = L.icon({
 });
 
 
+var youarehereIcon = L.icon({
+  iconUrl: 'here.png',
+  iconSize: [80, 80],
+  iconAnchor: [40, 80],
+})
+
+
 // Define cities
 // Define cities
 var cities = [
@@ -97,7 +104,7 @@ cities.forEach(function(city) {
     </div>
     `;
     
-    marker.bindPopup(popupContent);
-
-    
+    marker.bindPopup(popupContent); 
 });
+
+marker = L.marker([42.6977, 23.3219], {icon: youarehereIcon}).addTo(map)
